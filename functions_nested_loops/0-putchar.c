@@ -10,9 +10,14 @@
 
 int main(void)
 {
-	char c = "c";
+	char c[] = "_putchar";
+	char caractere;
 
-	_putchar(c);
+	for (i = 1; i <= 8; i++)
+	{
+	caractere = c[i]	
+	_putchar(caractere);
+	}
 
 	return (0);
 }
