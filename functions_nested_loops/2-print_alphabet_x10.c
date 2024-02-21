@@ -12,8 +12,21 @@ void print_alphabet_x10(void)
 {
 	int i;
 
-	for (i = 0; i <= 10; i++)
+	for (i = 0; i <= 9; i++)
 	{
 	print_alphabet();
+	}
+}
+
+void print_alphabet(void)
+{
+	char c[] = "abcdefghijklmnopqrstuvwxyz\n";
+	char caractere;
+	int i;
+
+	for (i = 0; i < 27 ; i++)
+	{
+	caractere = c[i];
+	_putchar(caractere);
 	}
 }
