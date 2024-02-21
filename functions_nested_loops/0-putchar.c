@@ -12,6 +12,7 @@ int main(void)
 {
 	char c[] = "_putchar";
 	char caractere;
+	int i;
 
 	for (i = 1; i <= 8; i++)
 	{
