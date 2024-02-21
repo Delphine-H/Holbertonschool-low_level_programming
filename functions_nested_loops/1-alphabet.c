@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - program that prints alphabet, followed by new line.
+ * print_alphabet - function that prints alphabet, followed by new line.
  *
  * Return: Always 0 (Success)
  */
@@ -21,5 +21,5 @@ int print_alphabet(void)
 	_putchar(caractere);
 	}
 
-	return (0)
+	return (0);
 }
