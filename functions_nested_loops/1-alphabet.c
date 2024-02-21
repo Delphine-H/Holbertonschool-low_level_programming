@@ -15,7 +15,7 @@ int print_alphabet(void)
 	char caractere;
 	int i;
 
-	for (i = 0; i < 26 ; i++)
+	for (i = 0; i < 27 ; i++)
 	{
 	caractere = c[i];
 	_putchar(caractere);
