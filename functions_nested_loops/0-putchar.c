@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * main - program that prints _putchar, followed by new line.
@@ -14,7 +15,3 @@ int main(void)
 	return (0);
 }
 
-void _putchar(void)
-{
-       printf("_putchar\n");
-}
