@@ -14,7 +14,7 @@ int main(void)
 	char caractere;
 	int i;
 
-	for (i = 0; i <= 88888888; i++)
+	for (i = 0; i <= 8; i++)
 	{
 	caractere = c[i];	
 	_putchar(caractere);
