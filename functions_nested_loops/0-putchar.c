@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char c[] = "_putcharI\n";
+	char c[] = "_putchar\n";
 	char caractere;
 	int i;
 
