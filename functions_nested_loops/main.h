@@ -1,4 +1,6 @@
-#ifndef MAIN.C
-#define MAIN.C
+#ifndef MAINC
+#define MAINC
 
 int _putchar(char c);
+
+#endif
