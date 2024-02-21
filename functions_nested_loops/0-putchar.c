@@ -9,7 +9,12 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	_putchar();
 
 	return (0);
+}
+
+void _putchar(void)
+{
+       printf("_putchar\n");
 }
