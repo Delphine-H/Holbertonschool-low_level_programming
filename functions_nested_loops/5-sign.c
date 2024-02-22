@@ -6,8 +6,8 @@
  * print_sign - function that prints the sign of a number.
  * @n: the number to check
  *
- * Return: 1 and print + if greater than zero, 0 and prints 0 in n is zero, -1 and
- * - otherwise
+ * Return: 1 and print + if greater than zero, 0 and prints 0 in n is zero, -1
+ * and - otherwise
  */
 
 int print_sign(int n)
