@@ -36,5 +36,5 @@ void sum_multiples(void)
 			sum = sum + i;
 		}
 	}
-	printf("%li\n", sum);
+	printf("%lu\n", sum);
 }
