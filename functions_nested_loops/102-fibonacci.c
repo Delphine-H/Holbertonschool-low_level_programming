@@ -37,7 +37,7 @@ void fibonacci(void)
 		nb2 = sum;
 		if (i <= 49)
 		{
-		printf("%lu ,", nb2);
+		printf("%lu, ", nb2);
 		}
 	}
 	printf("%lu\n", sum);
