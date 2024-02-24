@@ -26,7 +26,7 @@ int main(void)
 void sum_multiples(void)
 {
 	int i;
-	int sum;
+	long sum;
 
 	for (i = 0; i < 1024; i++)
 	{
@@ -36,5 +36,5 @@ void sum_multiples(void)
 			sum = sum + i;
 		}
 	}
-	printf("%i\n", sum);
+	printf("%li\n", sum);
 }
