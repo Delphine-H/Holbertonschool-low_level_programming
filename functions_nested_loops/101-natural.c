@@ -26,7 +26,7 @@ int main(void)
 void sum_multiples(void)
 {
 	int i;
-	long sum;
+	unsigned long sum = 0;
 
 	for (i = 0; i < 1024; i++)
 	{
