@@ -32,7 +32,7 @@ void sum_multiples(void)
 	{
 		if ((i % 3 == 0) || (i % 5 == 0))
 		{
-			printf("%i\n", i);
+			/* printf("%i\n", i);*/
 			sum = sum + i;
 		}
 	}
