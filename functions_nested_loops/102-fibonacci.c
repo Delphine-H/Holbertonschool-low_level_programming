@@ -18,7 +18,6 @@ int main(void)
 
 /**
  * fibonacci - function that prints the first 50 fibonacci numbers.
- * 
  *
  *
   */
@@ -35,7 +34,7 @@ void fibonacci(void)
 		sum = nb1 + nb2;
 		nb1 = nb2;
 		nb2 = sum;
-		if (i <= 49)
+		if (i < 49)
 		{
 		printf("%lu, ", nb2);
 		}
