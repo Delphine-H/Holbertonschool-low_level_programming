@@ -2,13 +2,28 @@
 #include <stdio.h>
 
 /**
- * multiples - function that computes and print the sum of the multiples
+ * main - check the code
+ *
+ *Return: (0) success
+ */
+
+int main(void)
+{
+	sum_multiples();
+
+	return (0);
+}
+
+
+
+/**
+ * sum_multiples - function that computes and print the sum of the multiples
  * of 3 or 5 below 1024.
  *
  *
   */
 
-void multiples(void)
+void sum_multiples(void)
 {
 	int i;
 	int sum;
