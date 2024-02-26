@@ -25,6 +25,6 @@ void more_numbers(void)
 			}
 			_putchar('0' + lastdigit);
 		}
-	}
 	_putchar('\n');
+	}
 }
