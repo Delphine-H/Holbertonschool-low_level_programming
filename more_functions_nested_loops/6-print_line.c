@@ -3,7 +3,7 @@
 /**
  * print_line - function that draws a straignt line in the therminal
  * followed by a new line.
- *
+ *@n: number of '_'
  *
  */
 
