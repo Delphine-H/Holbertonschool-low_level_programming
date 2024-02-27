@@ -16,7 +16,7 @@ void print_rev(char *s)
 
 	longueur = _strlen(s);
 
-	for (i = longueur; i >= 0 ; i--)
+	for (i = longueur - 1; i >= 0 ; i--)
 	{
 		caractere = chaine[i];
 		_putchar(caractere);
