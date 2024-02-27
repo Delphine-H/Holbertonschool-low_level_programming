@@ -11,14 +11,12 @@ int _strlen(char *s)
 {
 	char *chaine = s;
 	int i = 0;
-	char caractere; 
+	char caractere;
 
-	do
-	{
+	do {
 		caractere = chaine[i];
 		i++;
-	}
-	while (caractere != '\0');
+	} while (caractere != '\0');
 
 	return (i - 1);
 }
