@@ -7,6 +7,7 @@
  *
  *@dest: destination
  *@src: source
+ *Return: pointeur vers dest
  */
 
 char *_strcpy(char *dest, char *src)
