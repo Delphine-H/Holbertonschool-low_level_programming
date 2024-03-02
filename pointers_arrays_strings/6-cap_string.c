@@ -12,6 +12,11 @@ char *cap_string(char *text)
 {
 	char *pointer = text;
 
+	if (text[0] >= 'a' && text[0] <= 'z')
+	{
+		*text = *text - ('a' - 'A');
+		text++;
+	}
 
 	while (*text != '\0')
 	{
