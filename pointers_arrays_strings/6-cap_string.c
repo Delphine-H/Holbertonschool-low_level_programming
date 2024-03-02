@@ -3,7 +3,7 @@
 
 /**
  *  *cap_string - function that capitalizes all words of a string.
- *@text
+ *@text: text to capitalize	:x
  *
  * Return: pointeur vers string
  */
