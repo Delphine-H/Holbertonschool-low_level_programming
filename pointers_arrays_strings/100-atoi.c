@@ -15,19 +15,20 @@ int _atoi(char *s)
 
 	while ((!(*s >= '0' && *s <= '9') || *s == '+' || *s == '-') && (*s != '\0'))
 	{
-		if (*s == '+')
+		if (*s == '-')
 		{
-			signe = '+';
-			s++;
-		}
-		else if (*s == '-')
-		{
-			signe = '-';
+			if (signe == '-')
+			{
+				signe = '+';
+			}
+			else
+			{
+				signe = '-';
+			}
 			s++;
 		}
 		else
 		{
-			signe = '+';
 			s++;
 		}
 	}
