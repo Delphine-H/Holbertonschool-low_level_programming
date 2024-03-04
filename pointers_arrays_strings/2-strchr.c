@@ -19,6 +19,13 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	s = NULL;
-	return (s);
+
+	if (c == '\0')
+	{
+		return (s);
+	}
+	else
+	{	
+	return (NULL);
+	}
 }
