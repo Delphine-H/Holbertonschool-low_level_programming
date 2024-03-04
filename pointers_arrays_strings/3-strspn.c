@@ -35,10 +35,6 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		else
 		{
-			if (count > maxcount)
-			{
-				maxcount = count;
-			}
 			count = 0;
 		}
 
