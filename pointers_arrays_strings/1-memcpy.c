@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _memset - function that copies n bytes of the memory area
+ * _memcpy - function that copies n bytes of the memory area
  * src to memory area dest
  *
- *@s: memory area
- *@b: constant byte
+ *@dest: memory area
+ *@src: constant byte
  *@n: number of bytes
- *Return: pointer to the memory area s
+ *Return: pointer to dest
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
