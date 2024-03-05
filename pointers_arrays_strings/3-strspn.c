@@ -32,6 +32,11 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			count++;
 		}
+		else
+		{
+			break;
+		}
+
 		trouve = 0;
 		i++;
 	}
