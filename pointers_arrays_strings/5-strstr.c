@@ -28,6 +28,13 @@ char *_strstr(char *haystack, char *needle)
 	return (NULL);
 }
 
+/**
+ *compare - function that compare 2 strings
+ *@haystack: one string
+ *@needle: an other string
+ *Return: 0 if string are different, else '\0'
+ */
+
 
 int compare(const char *haystack, const char *needle)
 {
