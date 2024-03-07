@@ -13,8 +13,8 @@
 
 int main(int argc, char **argv)
 {
-	int a = 0;
-	int b = 0;
+	long a = 0;
+	long b = 0;
 	int i = 0;
 	int j = 0;
 	
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 			j++;
 		}
 
-		printf("%i\n", a * b);
+		printf("%ld\n", a * b);
 	}
 
 	return (0);
