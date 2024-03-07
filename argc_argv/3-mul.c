@@ -27,12 +27,12 @@ int main(int argc, char **argv)
 	{	
 		while (argv[1][i] != '\0')
 		{
-			a = a * 10 + (argv[1][i] + '0');
+			a = a * 10 + (argv[1][i] - '0');
 			i++;
 		}	
 		while (argv[2][j] != '\0')
 		{
-			b = b * 10 + (argv[2][j] + '0');
+			b = b * 10 + (argv[2][j] - '0');
 			j++;
 		}
 
