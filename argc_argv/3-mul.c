@@ -17,22 +17,25 @@ int main(int argc, char **argv)
 	long b = 0;
 	int i = 0;
 	int j = 0;
-	
+
 	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
-	}	
+	}
 	else
-	{	
+	{
 		while (argv[1][i] != '\0')
 		{
 			a = a * 10 + (argv[1][i] - '0');
+
 			i++;
-		}	
+		}
+
 		while (argv[2][j] != '\0')
 		{
 			b = b * 10 + (argv[2][j] - '0');
+
 			j++;
 		}
 
