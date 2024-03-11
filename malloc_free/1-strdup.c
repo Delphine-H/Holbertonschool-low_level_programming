@@ -34,6 +34,10 @@ char *_strdup(char *str)
 				return (copystring);
 			}
 		}
+		else
+		{
+			return (1);
+		}
 	}
 
 	return (NULL);
