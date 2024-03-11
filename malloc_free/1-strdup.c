@@ -11,34 +11,29 @@
 
 char *_strdup(char *str)
 {
-	int lenth = 0;
+	int length = 0;
 	int i;
 	char *copystring;
 
 	if (str != NULL)
 	{
-		while (str[lenth] != '\0')
+		while (str[length] != '\0')
 		{
-			lenth++;
+			length++;
 		}
-		if (lenth > 0)
+		if (length >= 0)
 		{
-			copystring = malloc(lenth * sizeof(char));
+			copystring = malloc(length * sizeof(char));
 
 			if (copystring != NULL)
 			{
-				for (i = 0; i < lenth; i++)
+				for (i = 0; i < length; i++)
 				{
 					copystring[i] = str[i];
 				}
 				return (copystring);
 			}
 		}
-		else
-		{
-			return (1);
-		}
 	}
-
 	return (NULL);
 }
