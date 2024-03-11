@@ -25,20 +25,29 @@ char *_strdup(char *str)
 		length++;
 	}
 	
-	copystring = malloc((length + 1) * sizeof(char));
-	
-	if (copystring != NULL)	
+	if (length > 0)
 	{
-		for (i = 0; i < length; i++)
-		{
-			copystring[i] = str[i];
-		}
+		copystring = malloc((length + 1) * sizeof(char));
 	
-		copystring[length] = '\0';
-		return (copystring);
+		if (copystring != NULL)	
+		{
+			for (i = 0; i < length; i++)
+			{
+				copystring[i] = str[i];
+			}
+	
+			copystring[length] = '\0';
+			return (copystring);
+		}
 	}
 	else
-	{	
-	return (NULL);
+	{
+		copystring = malloc(sizeof(char));
+		if (copystring != NULL)
+		{
+			copystring[0] = '/0';
+		}
 	}
+
+	return (NULL);
 }
