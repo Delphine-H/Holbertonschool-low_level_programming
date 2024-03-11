@@ -15,6 +15,11 @@ char *_strdup(char *str)
 	int i;
 	char *copystring;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
 	while (str[length] != '\0')
 	{
 		length++;
@@ -22,15 +27,14 @@ char *_strdup(char *str)
 	
 	copystring = malloc((length + 1) * sizeof(char));
 	
-	for (i = 0; i < length; i++)
+	if (copystring != NULL)	
 	{
-		copystring[i] = str[i];
-	}
+		for (i = 0; i < length; i++)
+		{
+			copystring[i] = str[i];
+		}
 	
-	copystring[length] = '\0';
-	
-	if (copystring != NULL)
-	{
+		copystring[length] = '\0';
 		return (copystring);
 	}
 	else
