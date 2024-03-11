@@ -14,12 +14,16 @@
     char *tableau;
     unsigned int i;
 
-    tableau = malloc(size * sizeof(char));
-    for (i = 0; i < size; i++)
-    {
+    if (size > 0)
+    {    
+        tableau = malloc(size * sizeof(char));
+        for (i = 0; i < size; i++)
+        {
         tableau[i] = c;
+        }
+        return (tableau);
     }
-
-    return (tableau);
+    
+    return (NULL);
 
 }
