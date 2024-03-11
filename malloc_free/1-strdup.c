@@ -31,6 +31,8 @@ char *_strdup(char *str)
 		copystring[length] = '\0';
 		return (copystring);
 	}
-	
+	else
+	{	
 	return (NULL);
+	}
 }
