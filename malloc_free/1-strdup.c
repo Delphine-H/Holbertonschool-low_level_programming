@@ -15,22 +15,24 @@ char *_strdup(char *str)
 	int i;
 	char *copystring;
 
-	if (str != NULL && str != "")
+	if (str != NULL)
 	{
 		while (str[lenth] != '\0')
 		{
 			lenth++;
 		}
-
-		copystring = malloc(lenth * sizeof(char));
-		
-		if (copystring != NULL)
+		if (lenth > 0)
 		{
-			for (i = 0; i < lenth; i++)
+			copystring = malloc(lenth * sizeof(char));
+
+			if (copystring != NULL)
 			{
-				copystring[i] = str[i];
+				for (i = 0; i < lenth; i++)
+				{
+					copystring[i] = str[i];
+				}
+				return (copystring);
 			}
-			return (copystring);
 		}
 	}
 
