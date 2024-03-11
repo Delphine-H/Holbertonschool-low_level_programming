@@ -45,7 +45,8 @@ char *_strdup(char *str)
 		copystring = malloc(sizeof(char));
 		if (copystring != NULL)
 		{
-			copystring[0] = '/0';
+			copystring[0] = '\0';
+			return (copystring);
 		}
 	}
 
