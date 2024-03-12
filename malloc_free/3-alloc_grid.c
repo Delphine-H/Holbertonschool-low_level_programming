@@ -6,29 +6,34 @@
  * array of integers.
  * @width: array width
  * @height: array height
- * Return: NULL on failure, 0 success 
+ * Return: NULL on failure, 0 success
 */
 
 int **alloc_grid(int width, int height)
 {
 	int **grid;
-	int i,j;
-	
+	int row, column;
+
 	if (width != 0 && height != 0)
 	{
-		grid = (int **) malloc(width * height * sizeof(int));
-		if (grid != NULL)
+		grid = malloc(height * sizeof(int));
+		if (grid == NULL)
 		{
-		for (i = 0; i < width; i++)
+			return (NULL);
+		}
+		for (row = 0; row < height; row++)
 		{
-			for (j = 0; j < height; j++)
+			grid[row] = malloc(width * sizeof(int));
+			if (grid[row] == NULL)
 			{
-				grid[i][j] = 0;
+				return (NULL);
+			}
+			for (column = 0; column < width; column++)
+			{
+				grid[row][column] = 0;
 			}
 		}
 		return (grid);
-		}
 	}
-
 	return (NULL);
 }
