@@ -22,11 +22,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		nbchars2++;
 	}
-	if ((nbchars1 == 0) || (s1 == NULL))
+	if ((nbchars1 == 0) | (s1 == NULL))
 	{
 		s1 = "";
 	}
-	if ((nbchars2 == 0) || (s2 == NULL))
+	if ((nbchars2 == 0) | (s2 == NULL))
 	{
 		s2 = "";
 	}
