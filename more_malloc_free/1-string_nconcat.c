@@ -25,10 +25,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if ((nbchars1 == 0) | (s1 == NULL))
 	{
 		s1 = "";
+		nbchars1 = 0;
 	}
 	if ((nbchars2 == 0) | (s2 == NULL))
 	{
 		s2 = "";
+		nbchars2 = 0;
 	}
 	if (nbchars2 >= n)
 	{
