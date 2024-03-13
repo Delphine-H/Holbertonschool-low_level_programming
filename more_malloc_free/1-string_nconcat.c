@@ -14,23 +14,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0, j = 0;
 	unsigned int nbchars1 = 0, nbchars2 = 0;
 
-	while (s1[nbchars1] !=  '\0')
-	{
-		nbchars1++;
-	}
-	while (s2[nbchars2] != '\0')
-	{
-		nbchars2++;
-	}
-	if ((nbchars1 == 0) | (s1 == NULL))
+	if (s1 == NULL)
 	{
 		s1 = "";
 		nbchars1 = 0;
 	}
-	if ((nbchars2 == 0) | (s2 == NULL))
+	while (s1[nbchars1] !=  '\0')
+	{
+		nbchars1++;
+	}
+	if (s2 == NULL)
 	{
 		s2 = "";
 		nbchars2 = 0;
+	}
+	while (s2[nbchars2] != '\0')
+	{
+		nbchars2++;
 	}
 	if (nbchars2 >= n)
 	{
