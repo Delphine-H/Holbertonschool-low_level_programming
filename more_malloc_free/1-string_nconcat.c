@@ -1,18 +1,16 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * string_nconcat - functipn that concatenates 2 strings.
  * @s1: first string
  * @s2: second string
- * n: n bites
+ * @n: n bites
  * Return: pointerof newly allocated space in memory
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i = 0, j = 0;
-	unsigned int nbchars1 = 0, nbchars2 = 0;
+	unsigned int i = 0, j = 0, nbchars1 = 0, nbchars2 = 0;
 
 	if (s1 == NULL)
 	{
@@ -36,7 +34,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		nbchars2 = n;
 	}
-
 	ptr = malloc((nbchars1 + nbchars2 + 1) * sizeof(char));
 	if (ptr != NULL)
 	{
