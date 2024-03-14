@@ -1,6 +1,9 @@
 #ifndef MAIN
 #define MAIN
 
+/**
+ *dog - structure of dog
+*/
 typedef struct dog
 {
 	char *name;
