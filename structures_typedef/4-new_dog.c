@@ -20,14 +20,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	while (name[length_name] != '\0')
-	{
-		length_name++;
-	}
-	while (owner[length_owner] != '\0')
-	{
-		length_owner++;
-	}
+	length_name = _strlen(name);
+	length_owner = _strlen(owner);
 
 	if (my_dog == NULL)
 	{
@@ -40,7 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(my_dog);
 		return (NULL);
 	}
-	my_dog->name = name;
+	_strcpy(my_dog->name, name);
 
 	my_dog->age = age;
 
@@ -51,7 +45,47 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(my_dog);
 		return (NULL);
 	}
-	my_dog->owner = owner;
+	_strcpy(my_dog->owner, owner);
 
 	return (my_dog);
+}
+
+/**
+ * _strcpy - function that copies a string.
+ *
+ *@dest: destination
+ *@src: source
+ */
+
+void _strcpy(char *dest, char *src)
+{
+	while (*src != '\0')
+	{
+		*dest = *src;
+		src++;
+		dest++;
+	}
+
+	*dest = '\0';
+
+}
+
+/**
+ * _strlen - function that returns the length of a string.
+ *@s: pointer vers str de la fonction main
+ *
+ *Return: length of a string
+ */
+int _strlen(char *s)
+{
+	char *chaine = s;
+	int i = 0;
+	char caractere;
+
+	do {
+		caractere = chaine[i];
+		i++;
+	} while (caractere != '\0');
+
+	return (i - 1);
 }
