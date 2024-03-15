@@ -7,7 +7,7 @@
  *@age: age of the dog
  *@owner: dog's owner name
  *
- *Description: datas of a dog name age owner patati patata...
+ *Description: datas of a dog name age owner 
 */
 typedef struct dog
 {
@@ -15,5 +15,7 @@ typedef struct dog
 	float age;
 	char *owner;
 } my_dog;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
