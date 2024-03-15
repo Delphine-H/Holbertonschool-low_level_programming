@@ -4,7 +4,6 @@
 /**
  * free_dog - function that frees dogs
  * @d: dog to free
- * 
  * Return: Nothing
 */
 
