@@ -16,7 +16,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	else
 	{
-		d->name = "";
+		exit("Ok");
 	}
 
 	if (age >= 0)
@@ -25,7 +25,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	else
 	{
-		d->age = 0;
+		exit("Ok");
 	}
 
 	if (owner != NULL)
@@ -34,11 +34,6 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	else
 	{
-		d->owner = "";
-	}
-
-	if (name == NULL || !(age >= 0) || (owner == NULL))
-	{
-	printf("Ok\n");
+		exit("Ok");
 	}
 }
