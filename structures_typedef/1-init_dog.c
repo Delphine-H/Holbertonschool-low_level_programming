@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * init_dog - function that initialize a variable of type
@@ -16,7 +17,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	else
 	{
-		exit("Ok");
+		exit(1);
 	}
 
 	if (age >= 0)
@@ -25,7 +26,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	else
 	{
-		exit("Ok");
+		exit(1);
 	}
 
 	if (owner != NULL)
@@ -34,6 +35,6 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	else
 	{
-		exit("Ok");
+		exit(1);
 	}
 }
