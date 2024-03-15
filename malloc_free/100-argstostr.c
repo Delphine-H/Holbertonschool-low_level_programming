@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 			_strcat(str, av[arg]);
 			_strcat(str, "\n");
 		}
-	
+
 	return (str);
 	}
 
