@@ -13,16 +13,15 @@
 
 int main(int argc, char *argv[])
 {
+	int (*operation)(int, int);
 
 	if (argc == 4)
 	{
-		int (*operation)(int, int) = get_op_func(argv[2]);
+		operation = get_op_func(argv[2]);
 
 		if (operation != NULL)
 		{
-			int resultat = operation(atoi(argv[1]), atoi(argv[3]));
-
-			printf("%d\n", resultat);
+			printf("%d\n", operation(atoi(argv[1]), atoi(argv[3])));
 			return (0);
 		}
 		else
