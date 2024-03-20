@@ -3,13 +3,14 @@
 /**
  * sum_them_all - function that returns the sum of all its parameters
  * @n: number of args
+ * @...: variables number
  * Return: sum (or 0 if n == 0)
 */
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;
 	unsigned int i;
-	double sum = 0;
+	unsigned int sum = 0;
 
 	if (n == 0)
 		return (0);
