@@ -12,75 +12,40 @@
 
 void print_all(const char * const format, ...)
 {
-	f_format form[] = {
-		{"c", f_char},
-		{"i", f_integer},
-		{"f", f_float},
-		{"s", f_string},
-		{NULL, NULL}
-	};
 	va_list args;
-	int i = 0, j;
-	
+	int i = 0;
+	char c;
+	char *str;
+
 	va_start(args, format);
 	
 	while (format[i] != '\0')
 	{
-		j = 0;
-		while (form[j].caractere != NULL)
+		c = format[i];
+		switch (c)
 		{
-			if (*(form[j].caractere) == format[i])
-			{
-				form[j].f(args);
-				if (format[i + 1] != '\0')
-					printf(", ");
-				break;
-			}
-			j++;
-		}
+            case 'c':
+            	printf("%c", va_arg(args, int));
+                break;
+            case 'i':
+                printf("%d", va_arg(args, int));
+                break;
+            case 'f':
+                printf("%f", (float)va_arg(args, double));
+                break;
+            case 's':
+                str = va_arg(args, char *);
+                if (str == NULL)
+                    str = "(nil)";
+                printf("%s", str);
+                break;
+   		 }
+		 if (format[i + 1] != '\0')
+		 	printf(", ");
 		i++;
 	}
+
 	printf("\n");
 
 	va_end(args);
-}
-
-
-/**
- * f_char - print a char
- * @str: string to convert
-*/
-void f_char(va_list args)
-{
-	printf("%c", va_arg(args, int));
-}
-
-/**
- * f_integer - print an integer
- * @str: string to convert
-*/
-void f_integer(va_list args)
-{
-	printf("%i", va_arg(args, int));
-}
-
-/**
- * f_float - print a float
- * @str: string to convert
-*/
-void f_float(va_list args)
-{
-	printf("%f", va_arg(args, double));
-}
-
-/**
- * f_string - print a char
- * @str: string to convert
-*/
-void f_string(va_list args)
-{
-	char *str = va_arg(args, char *);
-	if (str == NULL)
-		str = "(nil)"; 
-	printf("%s", str);
 }
