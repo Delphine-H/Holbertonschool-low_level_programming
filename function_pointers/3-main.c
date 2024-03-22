@@ -14,6 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int (*operation)(int, int);
+	char op;
 
 	if (argc == 4)
 	{
@@ -21,6 +22,12 @@ int main(int argc, char *argv[])
 
 		if (operation != NULL)
 		{
+			op = *(argv[2]);
+			if ((op == '/' || op == '%') && argv[3] == '0')
+			{
+				printf("Error\n");
+				return (100);
+			}
 			printf("%d\n", operation(atoi(argv[1]), atoi(argv[3])));
 			return (0);
 		}
