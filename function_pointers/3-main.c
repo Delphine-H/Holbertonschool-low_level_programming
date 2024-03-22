@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		operation = get_op_func(argv[2]);
 
-		if (operation != NULL)
+		if (operation != NULL && argv[2][1] == '\0')
 		{
 			op = *(argv[2]);
 			if ((op == '/' || op == '%') && atoi(argv[3]) == 0)
