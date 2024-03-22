@@ -10,7 +10,7 @@
 typedef struct op
 {
 	char *op;
-	int (*f)(int, int);
+	int (*f)(int a, int b);
 } op_t;
 
 
