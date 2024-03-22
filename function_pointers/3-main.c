@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 			if ((op == '/' || op == '%') && atoi(argv[3]) == 0)
 			{
 				printf("Error\n");
-				return (100);
+				exit(100);
 			}
 			printf("%d\n", operation(atoi(argv[1]), atoi(argv[3])));
 			return (0);
