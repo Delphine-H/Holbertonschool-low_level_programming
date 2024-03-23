@@ -19,13 +19,18 @@ int main(int argc, char *argv[])
 	int nb_pieces = 0;
 	int nbpieces25, nbpieces10, nbpieces5, nbpieces2;
 
-	if (argc > 2)
+	if (argc != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 
 	montant = atoi(argv[1]);
+	if (montant < 0)
+	{
+		printf("0\n");
+		return (0)
+	}
 
 	nbpieces25 = pieces25(montant);
 	montant -= nbpieces25 * 25;
