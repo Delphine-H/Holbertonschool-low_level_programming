@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	if (montant < 0)
 	{
 		printf("0\n");
-		return (0)
+		return (0);
 	}
 
 	nbpieces25 = pieces25(montant);
