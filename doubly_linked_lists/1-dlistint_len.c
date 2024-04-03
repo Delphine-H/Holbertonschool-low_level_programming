@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * add_nodeint - funtion that adds a new node at the beginning of a dobble
- * linked list
+ * dlistint_len - funtion that returns the number of elements in a linked
+ * list
  * @h : dobble linked list of integer
- * return: number of elements
+ * Return: number of elements
 */
 size_t dlistint_len(const dlistint_t *h)
 {
