@@ -10,20 +10,20 @@ size_t print_list(const list_t *h)
 {
 	size_t nbNode = 0;
 
-	if (h->str != NULL)
+	while (h)
 	{
-		while (h)
+		if (h->str == 0)
 		{
-			nbNode++;
-			if (h->len == 0)
-			{
-				printf("[0] (nill)\n");
-			}
-			printf("[%i] ", h->len);
-			printf("%s\n", h->str);
-			h = h->next;
+			printf("[0] (nill)\n");
 		}
+		else
+		{
+			printf("[%i] %s\n", h->len, h->str);
+		}
+		h = h->next;
+		nbNode++;
 	}
+
 	return (nbNode);
 }
 
