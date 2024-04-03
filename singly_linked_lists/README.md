@@ -20,3 +20,14 @@ You need to code your own main file named :
 - 1-main.c
 - 2-main.c
 - 3-main.c
+<h2>Examples</h2>
+<h3>result of function print_list :</h3>
+<img src="Capture t0.png" alt= "screen shot">
+<h3>result of function list_len :</h3>
+<img src="Capture t1.png" alt="Screen shot">
+<h3>result of function Add_node :</h3>
+<img src="Capture t2.png" alt="Screen shot">
+<h3>result of function Add_node_at_end :</h3>
+<img src="Capture t3.png" alt="Screen shot">
+<h3>result of function Free_list:</h3>
+<img src="Capture t4.png" alt="Screen shot">
