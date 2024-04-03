@@ -5,7 +5,7 @@ A singly linked list is a fundamental data structure in computer science. It con
 
 <h2>Requirement :</h2>
 Project have been checked on Ubuntu Ubuntu 22.04.3 LTS.
-gcc version : Ubuntu 22.04.3 LTS
+gcc version : gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 
 <h2>Installation :</h2>
 <h3>Terminal command :</h3>
