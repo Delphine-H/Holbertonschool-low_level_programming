@@ -12,33 +12,22 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *newData;
 	int lengthString = 0;
 
-	lengthString = _strlen(str);
-
+	while (str[lengthString] != '\0')
+	{
+		lengthString++;
+	}
+	
 	newData = malloc(sizeof(list_t));
 	if (newData == NULL)
 	{
 		return (NULL);
 	}
 	newData->str = strdup(str);
-	newData->len = strlen(str);
+	newData->len = lengthString;
 	newData->next = *head;
 	*head = newData;
 
 	return (newData);
 }
 
-/**
- * _strlen - function that count char of a string
- * @str: string to analyse
- * Return: length of the string
-*/
-int _strlen(char *str)
-{
-	int length = 0;
 
-	while (str[length] != '\0')
-	{
-		length++;
-	}
-	return (length);
-}
