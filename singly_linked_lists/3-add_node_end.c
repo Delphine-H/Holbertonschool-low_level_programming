@@ -11,16 +11,21 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newData;
 	list_t *lastNode;
+	int lengthString;
 
 	newData = malloc(sizeof(list_t));
 	if (newData == NULL)
 	{
-		printf("Erreur");
 		return (NULL);
 	}
 
+	while (str[lengthString] != '\0')
+	{
+		lengthString++;
+	}
+
 	newData->str = strdup(str);
-	newData->len = strlen(str);
+	newData->len = lengthString;
 	newData->next = NULL;
 
 	if (*head == NULL)
