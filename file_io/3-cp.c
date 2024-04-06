@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <sys/stat.h>
 
+#define BUFFER_SIZE 1024
+
 /**
  * main - program that copies the content of a file to another file
  * @argc: argument count
@@ -15,7 +17,7 @@ int main(int argc, char *argv[])
 {
 	int fd_from, fd_to; /* file descriptors */
 	int bytes_read, bytes_written;
-	char charactere;
+	char buffer[BUFFER_SIZE];
 
 	if (argc != 3) /* Check if the number of arguments is correct */
 	{
@@ -37,10 +39,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((bytes_read = read(fd_from, &charactere, 1)) > 0) /* Copy content */
+	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0) /* Copy content */
 	{
-		bytes_written = write(fd_to, &charactere, 1);
-		if (bytes_written != 1)
+		bytes_written = write(fd_to, buffer, bytes_read);
+		if (bytes_written != bytes_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
