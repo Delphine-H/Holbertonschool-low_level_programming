@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3) /* Check if the number of arguments is correct */
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file-to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -47,10 +47,30 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	if (close(fd_from) == -1 || close(fd_to) == -1) /* Close files */
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close file description\n");
-		exit(100);
-	}
+	close_file_description(fd_from, fd_to); /*close the file descriptor*/
+
 	return (0);
 }
+
+/**
+ * close_file_description - funcition that close a file description and
+ * exit with error if it's the case
+ * @fd_from: file description of origin
+ * @fd_to: file description ot destination
+*/
+
+void close_file_description(int fd_from, int fd_to)
+{
+	if (close(fd_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd_from);
+		exit(100);
+	}
+
+	if (close(fd_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd_to);
+		exit(100);
+	}
+}
+
