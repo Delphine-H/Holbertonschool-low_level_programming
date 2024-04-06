@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	}
 	/*Open or create the destination file, with appropriate permission */
 	fd_to = open(argv[2], O_WRONLY | O_CREAT |
-	O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+	O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
